@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=form, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Kantumruy Pro";
+        background-color: #f4f4f9;
+        padding: 20px;
+      }
+      form {
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+      legend {
+        font-weight: bold;
+        color: #333;
+      }
+      input[type="text"],
+      input[type="date"],
+      input[type="email"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; /* ធានាថា Width មិនលើសប្រអប់ */
+      }
+      /* ការតុបតែងប៊ូតុង / Button Styling */
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        font-family: "Kantumruy Pro";
+      }
+      button[type="reset"] {
+        background-color: #dc3545;
+        color: white;
+        font-family: "Kantumruy Pro";
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>១.ព័ត៌មានផ្ទាល់ខ្លួន</legend>
+        <label for="">ឈ្មោះពេញ</label><br />
+        <input type="text" placeholder="បញ្ចូលឈ្មោះពេញ" /><br /><br />
+        <label for="dob">ថ្ងៃខែឆ្នាំកំណើត</label><br />
+        <input type="date" id="dob" /><br /><br />
+        <label for="gender">ភេទ</label><br />
+        <input type="radio" name="Gender" id="male" value="male" />ប្រុស
+        <input
+          type="radio"
+          name="Gender"
+          id="female"
+          value="female"
+        />ស្រី<br /><br />
+        <label for="birthplace">ខេត្ត/រាជធានីកំណើត៖</label><br />
+        <select id="birthplace" name="birthplace">
+          <option value="" disabled selected font-family: "Kantumruy Pro";>
+            -----ជ្រើសរើសរាជធានីខេត្ត-----
+          </option>
+          <option value="">បន្ទាយមានជ័យ</option>
+          <option value="">សៀមរាប</option>
+        </select>
+      </fieldset>
+
+      <br /><br />
+
+      <fieldset>
+        <legend>២.ព័ត៌មានការសិក្សា</legend>
+        <label for="academic_year">ឆ្នាំសិក្សា៖</label><br />
+        <select id="academic_year" name="academic_year" style="color: black">
+          <option value="">ឆ្នាំទី១</option>
+          <option value="">ឆ្នាំទី២</option>
+          <option value="">ឆ្នាំទី៣</option>
+        </select>
+        <br /><br />
+        <label for="">ជំនាញដែលចូលចិត្ត៖</label><br />
+        <input type="checkbox" id="web" name="skill" value="web" />
+        <label for="web">Web Dev</label><br />
+        <input type="checkbox" id="ux" name="skill" value="ux" />
+        <label for="ux">UX/UI Design</label><br />
+        <input type="checkbox" id="net" name="skill" value="net" />
+        <label for="net">Networking</label><br /><br />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>៣.គណនីសុវត្ថិភាព</legend>
+        <label for="email">អ៊ីមែល៖</label><br />
+        <input
+          type="email"
+          id="email"
+          placeholder="example@email.com"
+        /><br /><br />
+        <label for="password">លេខកូដសម្ងាត់៖</label><br />
+        <input type="password" id="password" placeholder="បញ្ចូលលេខកូដ" /><br />
+      </fieldset>
+      <br />
+      <button type="submit">រក្សាទុក (Submit)</button>
+      <button type="reset">សម្អាត (Clear)</button>
+    </form>
+  </body>
+</html>
